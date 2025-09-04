@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Responsive</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px;
+      text-decoration: none;
+      text-align: center;
+      flex: 1; /* biar rata */
+    }
+
+    nav a:hover {
+      background: #575757;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .content {
+      flex: 2;
+      min-width: 250px;
+      padding: 20px;
+      background: #f4f4f4;
+      margin: 10px;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 200px;
+      padding: 20px;
+      background: #ddd;
+      margin: 10px;
+    }
+
+    footer {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Media Query untuk HP */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Responsive</h1>
+    <p>Bisa diakses dari komputer maupun HP</p>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Layanan</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h2>Konten Utama</h2>
+      <p>
+        Ini adalah bagian konten utama. Di komputer tampil 2 kolom (konten + sidebar), 
+        sedangkan di HP otomatis jadi 1 kolom agar lebih mudah dibaca.
+      </p>
+    </div>
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Ini sidebar. Bisa diisi menu tambahan atau iklan.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Website Responsive. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
